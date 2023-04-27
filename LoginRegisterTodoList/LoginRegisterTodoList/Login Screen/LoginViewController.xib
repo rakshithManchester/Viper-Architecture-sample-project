@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="LoginRegisterTodoList" customModuleProvider="target">
+            <connections>
+                <outlet property="loginBtn" destination="TDj-4u-YHM" id="2ZD-Lj-JuF"/>
+                <outlet property="passwdTxt" destination="jdd-iJ-GDQ" id="O8N-d5-hRa"/>
+                <outlet property="usernameTxt" destination="X3P-Wr-j9f" id="lHW-gb-6Ps"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="Login" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3P-Wr-j9f" userLabel="UsernameTxt">
+                    <rect key="frame" x="16" y="246" width="361" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="V11-BQ-Khv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdd-iJ-GDQ">
+                    <rect key="frame" x="16" y="310" width="361" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="OeP-Ga-8bk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDj-4u-YHM">
+                    <rect key="frame" x="16" y="409" width="361" height="35"/>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                    </accessibility>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Login">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="loginTappedWithSender:" destination="-1" eventType="touchUpInside" id="lSB-rC-j10"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmF-oJ-J9U">
+                    <rect key="frame" x="16" y="469" width="145" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Reset Password">
+                        <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="resetPasswordTappWithSender:" destination="-1" eventType="touchUpInside" id="Y3M-v8-flv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsv-oS-mRS">
+                    <rect key="frame" x="252.33333333333334" y="469" width="124.66666666666666" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Register user"/>
+                    <connections>
+                        <action selector="registerUserTappWithSender:" destination="-1" eventType="touchUpInside" id="gcN-6O-Lm1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Qsv-oS-mRS" firstAttribute="trailing" secondItem="TDj-4u-YHM" secondAttribute="trailing" id="2os-d5-Mkw"/>
+                <constraint firstItem="rmF-oJ-J9U" firstAttribute="leading" secondItem="TDj-4u-YHM" secondAttribute="leading" id="36v-eM-gBI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X3P-Wr-j9f" secondAttribute="trailing" constant="16" id="3G1-YE-Ngj"/>
+                <constraint firstItem="jdd-iJ-GDQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="R5c-Ti-gUX"/>
+                <constraint firstItem="TDj-4u-YHM" firstAttribute="top" secondItem="jdd-iJ-GDQ" secondAttribute="bottom" constant="65" id="U6k-6a-3Ed"/>
+                <constraint firstItem="X3P-Wr-j9f" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="0.6" id="VQ1-2o-la8"/>
+                <constraint firstItem="TDj-4u-YHM" firstAttribute="trailing" secondItem="jdd-iJ-GDQ" secondAttribute="trailing" id="brj-Zs-bDI"/>
+                <constraint firstItem="rmF-oJ-J9U" firstAttribute="top" secondItem="TDj-4u-YHM" secondAttribute="bottom" constant="25" id="h1H-MO-Cys"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jdd-iJ-GDQ" secondAttribute="trailing" constant="16" id="jqc-mb-ZcE"/>
+                <constraint firstItem="jdd-iJ-GDQ" firstAttribute="top" secondItem="X3P-Wr-j9f" secondAttribute="bottom" constant="30" id="lWG-9w-dkd"/>
+                <constraint firstItem="TDj-4u-YHM" firstAttribute="leading" secondItem="jdd-iJ-GDQ" secondAttribute="leading" id="uke-15-4ci"/>
+                <constraint firstItem="X3P-Wr-j9f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="vM0-b5-6DK"/>
+                <constraint firstItem="Qsv-oS-mRS" firstAttribute="top" secondItem="TDj-4u-YHM" secondAttribute="bottom" constant="25" id="vx6-ua-1g0"/>
+            </constraints>
+            <point key="canvasLocation" x="23.664122137404579" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
